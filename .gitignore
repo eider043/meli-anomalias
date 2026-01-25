@@ -1,0 +1,9 @@
+# No subir el CSV histórico sensible
+data/precios_historicos.csv
+
+# Otros ignores comunes
+__pycache__/
+*.pyc
+.ipynb_checkpoints
+.env
+.vscode/
