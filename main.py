@@ -6,8 +6,8 @@ from src.config import (
     ITEM_COL, PRICE_COL,
     RUN_MODE,
     H2H_N_TOTAL, H2H_POS_FRAC, H2H_MIN_HIST,
-    MAX_LLM_CALLS_PROD,   # <-- NUEVO
-    LOG_EVERY_N_CALLS     # <-- NUEVO (opcional, ej. 25)
+    MAX_LLM_CALLS_PROD,   
+    LOG_EVERY_N_CALLS     
 )
 
 import pandas as pd
@@ -111,7 +111,7 @@ def cap_prefilter_candidates(df: pd.DataFrame) -> pd.DataFrame:
         print(f"[PREFILTER] Candidates within cap: {len(cand_df)} <= {MAX_LLM_CALLS_PROD}")
         return df
 
-    # Ordenar por score (si existe)
+    # Ordenar por score 
     if "z_score" in df.columns:
         cand_df = cand_df.reindex(cand_df["z_score"].abs().sort_values(ascending=False).index)
     else:

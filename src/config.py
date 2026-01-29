@@ -12,13 +12,13 @@ RANDOM_SEED = 42
 RUN_MODE = "prefilter"   # "head_to_head" | "prefilter" | "both"
 
 # --- Head-to-head subset ---
-H2H_N_TOTAL = 400          # tamaño total del subset (ajusta según tiempo)
+H2H_N_TOTAL = 400          # tamaño total del subset 
 H2H_POS_FRAC = 0.50         # fracción candidatos (stat=ANOMALO) dentro del subset
 H2H_MIN_HIST = 5            # mínimo historial para permitir LLM
 
 # --- Prefiltro producción ---
 PREFILTER_ONLY_CANDIDATES = True
-MAX_HIST_LLM = 30           # ya lo usas en model_llm
+MAX_HIST_LLM = 30           
 
 MAX_LLM_CALLS_PROD = 200  # demo rápido
 LOG_EVERY_N_CALLS = 25
